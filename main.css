@@ -4,3 +4,107 @@
     box-sizing: border-box;
     font-family: 'montserrat', sans-serif;
 }
+*{
+    --blue-color: #2484e4;
+    --dark-color: #212121;
+    --gray-color: #53565A;
+    --darker-color: #313131;
+}
+.product-detail{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.imagery{
+    flex: 1 1 60%;
+    width: 60%;
+    padding: 50px 100px;
+    background-color: var(--blue-color);
+    transition: .4s;
+}
+.imagery img{
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    animation: fadein 1s ease-in-out forwards;
+    animation-delay: .5s;
+    opacity: 0;
+}
+.detail{
+    flex: 1 1 40%;
+    width: 40%;
+    padding: 50px;
+}
+.detail h1{
+    color: var(--dark-color);
+    font-size: 32px;
+    font-weight: 900;
+}
+.detail h2{
+    color: var(--gray-color);
+    font-size: 22px;
+    font-weight: 700;
+}
+.detail h3{
+    color: var(--gray-color);
+    font-size: 21px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+.btn_grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.btn_grid .btn_wrap{
+    flex: 1 1 50%;
+    width: 50%;
+    padding: 15px;
+}
+button{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #eee;
+    color: var(--darker-color);
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.4s;
+}
+button:hover{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+button .size{
+    position: relative;
+    z-index: 1;
+}
+button.size::before,
+button.size::after{
+    content: '';
+    position: absolute;
+    top: -3px; left: -3px; right: -3px; bottom: -3px;
+    transition: 0.4s;
+}
+button.size::after{
+    z-index: -1;
+    background-color: #fff;
+    border: 3px solid #eee;
+}
+button.size::before{
+    z-index: -2;
+    background-image: linear-gradient(to right, #ed008d, #8d00ed);
+}
+button.size.selected::after{
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
