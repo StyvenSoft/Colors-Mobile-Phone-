@@ -5,7 +5,11 @@
     font-family: 'montserrat', sans-serif;
 }
 *{
-    --blue-color: #2484e4;
+    --blue-color: radial-gradient(ellipse at center, rgba(138,180,222,1) 0%, rgba(36,132,229,1) 89%, rgba(36,132,229,1) 100%);
+    --red-color: radial-gradient(ellipse at center, rgba(173,109,117,1) 0%, rgba(175,30,45,1) 89%, rgba(175,30,45,1) 100%);
+    --yellow-color:  radial-gradient(ellipse at center, rgba(245,233,186,1) 0%, rgba(255,204,0,1) 89%, rgba(255,204,0,1) 100%);
+    --coral-color: radial-gradient(ellipse at center, rgba(247,182,161,1) 0%, rgba(255,108,55,1) 89%, rgba(255,108,55,1) 100%);
+    --black-color: radial-gradient(ellipse at center, rgba(82,82,82,1) 0%, rgba(33,33,33,1) 89%, rgba(33,33,33,1) 100%);
     --dark-color: #212121;
     --gray-color: #53565A;
     --darker-color: #313131;
@@ -19,7 +23,7 @@
     flex: 1 1 60%;
     width: 60%;
     padding: 50px 100px;
-    background-color: var(--blue-color);
+    background: var(--blue-color);
     transition: .4s;
 }
 .imagery img{
@@ -65,7 +69,7 @@
 button{
     display: block;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -107,4 +111,28 @@ button.size.selected::after{
 @keyframes fadein {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+.colours .btn_wrap .black.selected{
+    background-color: #212121;
+    color: #fff;
+}
+.colours .btn_wrap .blue.selected{
+    background-color: #2484e4;
+    color: #fff;
+}
+.colours .btn_wrap .red.selected{
+    background-color: #af1e2d;
+    color: #fff;
+}
+.colours .btn_wrap .yellow.selected{
+    background-color: #ffce00;
+    color: #212121;
+}
+.colours .btn_wrap .coral.selected{
+    background-color: #ff6c37;
+    color: #fff;
+}
+.colours .btn_wrap .white.selected{
+    background-color: #eee;
+    color: #212121;
 }
