@@ -9,7 +9,7 @@
     --red-color: radial-gradient(ellipse at center, rgba(173,109,117,1) 0%, rgba(175,30,45,1) 89%, rgba(175,30,45,1) 100%);
     --yellow-color:  radial-gradient(ellipse at center, rgba(245,233,186,1) 0%, rgba(255,204,0,1) 89%, rgba(255,204,0,1) 100%);
     --coral-color: radial-gradient(ellipse at center, rgba(247,182,161,1) 0%, rgba(255,108,55,1) 89%, rgba(255,108,55,1) 100%);
-    --black-color: radial-gradient(ellipse at center, rgba(82,82,82,1) 0%, rgba(33,33,33,1) 89%, rgba(33,33,33,1) 100%);
+    --black-color: radial-gradient(ellipse at center, rgba(92,91,92,1) 0%, rgba(33,33,33,1) 89%, rgba(33,33,33,1) 100%);
     --dark-color: #212121;
     --gray-color: #53565A;
     --darker-color: #313131;
@@ -52,7 +52,7 @@
 }
 .detail h3{
     color: var(--gray-color);
-    font-size: 21px;
+    font-size: 24px;
     font-weight: 300;
     margin-bottom: 50px;
 }
@@ -76,7 +76,7 @@ button{
     outline: none;
     background: none;
     cursor: pointer;
-    border: 2px solid #eee;
+    border: 2px solid #d8d8d8;
     color: var(--darker-color);
     font-size: 20px;
     font-weight: 700;
@@ -103,7 +103,7 @@ button.size::after{
 }
 button.size::before{
     z-index: -2;
-    background-image: linear-gradient(to right, #ed008d, #8d00ed);
+    background-image: linear-gradient(to right, #007aed, #5b00ed);
 }
 button.size.selected::after{
     top: 0; left: 0; right: 0; bottom: 0;
@@ -135,4 +135,34 @@ button.size.selected::after{
 .colours .btn_wrap .white.selected{
     background-color: #eee;
     color: #212121;
+}
+.submit{
+    background-image: linear-gradient(to right, transparent 50%, #007aed 50%, #5b00ed 100%);
+    background-size: 200%;
+    background-position: 0 50%;
+    transition: .8s;
+}
+.submit:hover{
+    color: #fff;
+    background-position: 100% 50%;
+}
+@media screen and (max-width: 768px){
+    .product-detail{
+        display: grid;
+    }
+    .imagery{
+        width: 100%;
+    }
+    .detail{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .imagery{
+        display: grid;
+        align-items: center;
+    }
+    .imagery img{
+        height: 38%;
+    }
 }
